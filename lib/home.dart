@@ -19,7 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.black26,
         elevation: 0.0,
         title: Text(
-          'HOME',
+          'ALL SEMESTER',
           style: TextStyle(
             fontWeight: FontWeight.w500,
           ),

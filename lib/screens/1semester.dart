@@ -123,7 +123,14 @@ class _Sem1State extends State<Sem1> {
     return Row(
       children: <Widget>[
         InkWell(
-          onTap: () => {print('Tap')},
+          onTap: () => {
+            showDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return viewdown();
+              },
+            )
+          },
           child: Container(
             width: MediaQuery.of(context).size.width * 0.4,
             height: MediaQuery.of(context).size.height * 0.08,
@@ -142,4 +149,28 @@ class _Sem1State extends State<Sem1> {
       ],
     );
   }
+}
+
+Widget viewdown() {
+  return AlertDialog(
+    content: Column(
+      children: [
+        ListTile(
+          title: Text("Question Paper 1"),
+          trailing:
+              IconButton(icon: Icon(Icons.download_rounded), onPressed: () {}),
+        ),
+        ListTile(
+          title: Text("Question Paper 2"),
+          trailing:
+              IconButton(icon: Icon(Icons.download_rounded), onPressed: () {}),
+        ),
+        ListTile(
+          title: Text("Question Paper 3"),
+          trailing:
+              IconButton(icon: Icon(Icons.download_rounded), onPressed: () {}),
+        ),
+      ],
+    ),
+  );
 }
